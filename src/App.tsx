@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  RevealJS,
+  Slide,
+  H1,
+  HighlightPlugin,
+  Fragment,
+} from "@gregcello/revealjs-react";
+import "styles/black-theme.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RevealJS plugins={[HighlightPlugin]}>
+      <Slide>
+        <Slide>
+          <H1>Hello,Meow!</H1>
+        </Slide>
+        <Slide>
+          <H1>Hello, World!</H1>
+          <H1>Hello, World23!</H1>
+        </Slide>
+      </Slide>
+      <Slide>
+        <H1>Hello,Meow!</H1>
+        <Slide>
+          <H1>Hello, World!</H1>
+          <H1>Hello, World23!</H1>
+        </Slide>
+      </Slide>
+      <Slide>
+        <H1>Hello, World 2!</H1>
+      </Slide>
+    </RevealJS>
   );
 }
 
